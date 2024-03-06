@@ -59,6 +59,7 @@ class Editora {
       return this.atualizar(this.id);
     }
     return this.criar();
+    // return null;
   }
 
   static async pegarLivrosPorEditora(editoraId) {

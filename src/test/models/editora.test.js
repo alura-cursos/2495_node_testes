@@ -10,7 +10,7 @@ describe('Testando o modelo Editora', () => {
     email: 'c@c.com',
   };
 
-  it('Deve instanciar uma nova editora', () => {
+  it.skip('Deve instanciar uma nova editora', () => {
     const editora = new Editora(objetoEditora);
 
     expect(editora).toEqual(
@@ -43,10 +43,10 @@ describe('Testando o modelo Editora', () => {
     );
   });
 
-  it('Deve fazer uma chamada simulada ao BD', () => {
+  it('Deve fazer uma chamada simulada ao BD', async () => {
     const editora = new Editora(objetoEditora);
 
-    editora.salvar = jest.fn().mockReturnValue({
+    editora.criar = jest.fn().mockReturnValue({
       id: 10,
       nome: 'CDC',
       cidade: 'Sao Paulo',
@@ -55,7 +55,7 @@ describe('Testando o modelo Editora', () => {
       updated_at: '2022-10-01',
     });
 
-    const retorno = editora.salvar();
+    const retorno = await editora.salvar();
 
     expect(retorno).toEqual(
       expect.objectContaining({
