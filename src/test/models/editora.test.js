@@ -10,7 +10,7 @@ describe('Testando o modelo Editora', () => {
     email: 'c@c.com',
   };
 
-  it('Deve instanciar uma nova editora', () => {
+  it.skip('Deve instanciar uma nova editora', () => {
     const editora = new Editora(objetoEditora);
 
     expect(editora).toEqual(

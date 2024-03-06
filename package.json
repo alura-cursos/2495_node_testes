@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --verbose"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --verbose",
+    "test:models": "node --experimental-vm-modules node_modules/jest/bin/jest.js --testPathPattern=src/test/models/ --verbose"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +23,7 @@
     "eslint": "8.16.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.26.0",
-    "jest": "28.1.2",
+    "jest": "^28.1.2",
     "nodemon": "2.0.16",
     "supertest": "6.2.4"
   }
