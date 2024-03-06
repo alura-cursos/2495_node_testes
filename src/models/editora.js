@@ -55,11 +55,11 @@ class Editora {
     // verificar se o id existe no banco
     // se não existir é create
     // se existir é update
-    // if (this.id) {
-    //   return this.atualizar(this.id);
-    // }
-    // return this.criar();
-    return null;
+    if (this.id) {
+      return this.atualizar(this.id);
+    }
+    return this.criar();
+    // return null;
   }
 
   static async pegarLivrosPorEditora(editoraId) {
